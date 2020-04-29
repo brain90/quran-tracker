@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <style>
+        div[id^="juz"] {
+            height: 300px;
+            /* width: 380px; */
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div id="juz1"></div>
+        </div>
+        <div class="col-md-4">
+            <div id="juz2"></div>
+        </div>
+
+        <div class="col-md-4">
+            <div id="juz3"></div>
+        </div>
+    </div>
+    <div style="margin-bottom: 25px;"></div>
+    <div class="row">
+        <div class="col-md-4">
+            <div id="juz4"></div>
+        </div>
+        <div class="col-md-4">
+            <div id="juz5"></div>
+        </div>
+
+        <div class="col-md-4">
+            <div id="juz6"></div>
+        </div>
+    </div>
+
+
+
+    <!--
+    <script>
+        // First, let's make the colors transparent
+        Highcharts.setOptions({
+            colors: Highcharts.map(Highcharts.getOptions().colors, function(color) {
+                return Highcharts.color(color)
+                    .setOpacity(0.5)
+                    .get('rgba');
+            })
+        });
+
+        Highcharts.chart('juz1', {
+
+            credits: {
+                enabled: false
+            },
+            chart: {
+                type: 'column',
+                zoomType: 'xy',
+            },
+            title: {
+                text: 'Bagian 1'
+            },
+            subtitle: {
+                text: 'Juz 1 s.d Juz 5'
+            },
+            xAxis: {
+                /*
+                categories: ['Al-Fatihah', 'Al-Baqarah', 'Ali Imran', 'An-Nisa', 'Al-Maidah', 'Al-Anam', 'Al-Araf', 'Al-Anfal', 'At-Taubah', 'Yunus', 'Hud', 'Yusuf', 'Ar-Rad', 'Ibrahim', 'Al-Hijr', 'An-Nahl', 'Al-Isra', 'Al-Kahf', 'Maryam', 'Ta Ha', 'Al-Anbiya', 'Al-Hajj', 'Al-Muminun', 'An-Nur', 'Al-Furqan', 'Asy-Syuara', 'An-Naml', 'Al-Qasas', 'Al-Ankabut', 'Ar-Rum', 'Luqman', 'As-Sajdah', 'Al-Ahzab', 'Saba', 'Fatir', 'Ya Sin', 'As-Saffat', 'Sad', 'Az-Zumar', 'Al-Mumin', 'Fussilat', 'Asy-Syura', 'Az-Zukhruf', 'Ad-Dukhan', 'Al-Jasiyah', 'Al-Ahqaf', 'Muhammad', 'Al-Fath', 'Al-Hujurat', 'Qaf', 'Az-Zariyat', 'At-Tur', 'An-Najm', 'Al-Qamar', 'Ar-Rahman', 'Al-Waqiah', 'Al-Hadid', 'Al-Mujadilah', 'Al-Hasyr', 'Al-Mumtahanah', 'As-Saff', 'Al-Jumuah', 'Al-Munafiqun', 'At-Tagabun', 'At-Talaq', 'At-Tahrim', 'Al-Mulk', 'Al-Qalam', 'Al-Haqqah', 'Al-Maarij', 'Nuh', 'Al-Jinn', 'Al-Muzzammil', 'Al-Muddassir', 'Al-Qiyamah', 'Al-Insan', 'Al-Mursalat', 'An-Naba', 'An-Naziat', 'Abasa', 'At-Takwir', 'Al-Infitar', 'Al-Tatfif', 'Al-Insyiqaq', 'Al-Buruj', 'At-Tariq', 'Al-Ala', 'Al-Gasyiyah', 'Al-Fajr', 'Al-Balad', 'Asy-Syams', 'Al-Lail', 'Ad-Duha', 'Al-Insyirah', 'At-Tin', 'Al-Alaq', 'Al-Qadr', 'Al-Bayyinah', 'Az-Zalzalah', 'Al-Adiyat', 'Al-Qariah', 'At-Takasur', 'Al-Asr', 'Al-Humazah', 'Al-Fil', 'Quraisy', 'Al-Maun', 'Al-Kausar', 'Al-Kafirun', 'An-Nasr', 'Al-Lahab', 'Al-Ikhlas', 'Al-Falaq', 'An-Nas']
+                */
+                /*
+                                categories: [
+                                    'Al-Fatihah - Al-Baqarah 141', 'Al-Baqarah 142-252',
+                                    'Al-Baqarah 253 - Al-Imran 92', 'Al-Imran 94 - An-Nissa 23',
+                                    'Ali Imran 93 – An-Nisa 23'
+                                ]
+                                */
+                categories: ['juz 1', 'juz 2', 'juz 3', 'juz 4', 'juz 5']
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Jumlah Ayat'
+                }
+            },
+            tooltip: {
+                shared: true,
+                valueSuffix: ' ayat'
+            },
+            plotOptions: {
+                column: {
+                    grouping: false,
+                    shadow: false
+                }
+            },
+            series: [{
+                name: 'jumlah_ayat',
+                /*
+                data: [7, 286, 200, 176, 120, 165, 206, 75, 129, 109, 123, 111, 43, 52, 99, 128, 111, 110, 98, 135, 112, 78, 118, 64, 77, 227, 93, 88, 69, 60, 34, 30, 73, 54, 45, 83, 182, 88, 75, 85, 54, 53, 89, 59, 37, 35, 38, 29, 18, 45, 60, 49, 62, 55, 78, 96, 29, 22, 24, 13, 14, 11, 11, 18, 12, 12, 30, 52, 52, 44, 28, 28, 20, 56, 40, 31, 50, 40, 46, 42, 29, 19, 36, 25, 22, 17, 19, 26, 30, 20, 15, 21, 11, 8, 8, 19, 5, 8, 8, 11, 11, 8, 3, 9, 5, 4, 7, 3, 6, 3, 5, 4, 5, 6],
+                */
+                data: [148, 111, 126, 131, 124],
+                pointPadding: 0
+            }, {
+                name: 'jumlah_hapal',
+                data: [7, 10, 0],
+                pointPadding: 0
+            }]
+        });
+    </script>
+-->
+
+    <script>
+        var idx = {};
+        var i;
+
+        idx = {
+            1: {
+                'juz': ['juz 1', 'juz 2', 'juz 3', 'juz 4', 'juz 5'],
+                'jumlah': [148, 111, 126, 131, 124]
+            },
+            2: {
+                'juz': ['Juz 06', 'Juz 07', 'Juz 08', 'Juz 09', 'Juz 10'],
+                'jumlah': [110, 149, 142, 159, 127]
+            },
+            3: {
+                'juz': ['Juz 11', 'Juz 12', 'Juz 13', 'Juz 14', 'Juz 15'],
+                'jumlah': [151, 170, 154, 227, 185]
+            },
+            4: {
+                'juz': ['Juz 16', 'Juz 17', 'Juz 18', 'Juz 19', 'Juz 20'],
+                'jumlah': [269, 190, 202, 339, 171]
+            },
+            5: {
+                'juz': ['Juz 21', 'Juz 22', 'Juz 23', 'Juz 24', 'Juz 25'],
+                'jumlah': [178, 169, 357, 175, 246]
+            },
+            6: {
+                'juz': ['Juz 26', 'Juz 27', 'Juz 28', 'Juz 29', 'Juz 30'],
+                'jumlah': [195, 399, 137, 431, 564]
+            }
+        }
+
+        for (i = 1; i <= 6; i++) {
+
+            Highcharts.chart('juz' + i, {
+                chart: {
+                    type: 'column',
+                },
+                credits: {
+                    enabled: false
+                },
+                exporting: {
+                    enabled: false
+                },
+                legend: {
+                    enabled: false
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: idx[i].juz
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                tooltip: {
+                    shared: true,
+                    valueSuffix: ' ayat'
+                },
+                plotOptions: {
+                    column: {
+                        grouping: false,
+                        shadow: false,
+                        dataLabels: {
+                            enabled: true
+                        },
+                        enableMouseTracking: false
+                    },
+                },
+                series: [{
+                    name: 'jumlah_ayat',
+                    data: idx[i].jumlah,
+                    pointPadding: 0
+                }, {
+                    name: 'jumlah_hapal',
+                    data: [10],
+                    pointPadding: 0
+                }]
+            });
+        }
+    </script>
+
+
+
+</body>
+
+</html>
