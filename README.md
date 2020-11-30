@@ -9,9 +9,10 @@ no  ; surah         ; ayah ; memorized
 </pre>
 
 Run q.py to get the result
-% python q.py
 
 <pre>
+% python q.py
+
 memorized : 905 of 6236 (14.51%)
 remainder : 5331 (85.49%)
 </pre>
