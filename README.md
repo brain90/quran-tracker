@@ -1,4 +1,4 @@
-# Quran-Tracker
+# Quran-Tracker a.k.a QT
 Log and calculate quran memorizing progress.
 
 # Usage
