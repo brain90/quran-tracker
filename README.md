@@ -21,6 +21,6 @@ remainder : 5331 (85.49%)
 Use lafdzi to find your memorized ayah quickly. type the ayah in quran latin transliteration. lafzi will give you the surah name and exact ayah position. 
 http://lafzi.apps.cs.ipb.ac.id/web/
 
-# TODO
+# Todo
 * Memorized histogram
 * Statistic in html format
