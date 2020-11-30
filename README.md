@@ -1,4 +1,4 @@
-# Quran-Tracker / qt
+# Quran-Tracker
 Log and calculate quran memorizing progress.
 
 # Usage
@@ -8,7 +8,7 @@ no  ; surah         ; ayah ; memorized
 2   ; Al-Baqarah    ; 286  ; 1-5, 255-257, 275-281
 </pre>
 
-Run `q.py`. qt will read quran.csv and show your memorizing progress. 
+Run `q.py`. Quran tracker will read quran.csv and show your memorizing progress. 
 
 <pre>
 % python q.py
