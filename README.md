@@ -1,5 +1,5 @@
 # Quran-Tracker
-Log and calculate quran memorizing progress.
+Log and calculate your quran memorizing progress.
 
 # Usage
 Log your memorized ayah in quran.csv. Use `{start-end}, {start-end} format` to log multiple section. For instance, you have memorized al-baqarah ayah 1 to 5, 255 to 257, 275 to 281. Write those section like this:  
