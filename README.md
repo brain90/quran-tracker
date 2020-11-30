@@ -16,3 +16,11 @@ Run q.py to get the result
 memorized : 905 of 6236 (14.51%)
 remainder : 5331 (85.49%)
 </pre>
+
+# Tips
+Use lafdzi to find your memorized ayah quickly. type the ayah in quran latin transliteration. lafzi will give you the surah name and exact ayah position. 
+http://lafzi.apps.cs.ipb.ac.id/web/
+
+# TODO
+* Memorized histogram
+* Statistic in html format
