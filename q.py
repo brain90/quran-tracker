@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 total = 0
 with open('quran.csv') as f:
     next(f)
