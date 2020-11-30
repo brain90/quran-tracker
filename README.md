@@ -8,7 +8,7 @@ no  ; surah         ; ayah ; memorized
 2   ; Al-Baqarah    ; 286  ; 1-5, 255-257, 275-281, 284-286
 </pre>
 
-Run q.py to get the result
+Run q.py. qt will read quran.csv and give show your memorizing progress. 
 
 <pre>
 % python q.py
